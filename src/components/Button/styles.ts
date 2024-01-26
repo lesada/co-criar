@@ -18,6 +18,7 @@ export const Container = styled.button<{
 
   font-size: 16px;
   font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.OpenSans.style.fontFamily};
 
   transition:
     background-color 0.2s ease,

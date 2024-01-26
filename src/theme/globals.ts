@@ -1,20 +1,13 @@
 'use client';
 
-import { DM_Sans } from 'next/font/google';
 import { createGlobalStyle } from 'styled-components';
-
-
-const DmSans = DM_Sans({
-  subsets: ['latin'],
-});
 
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    font-family: ${DmSans.style.fontFamily}
+    font-family: ${({ theme }) => theme.fonts.Inter.style.fontFamily};
   }
 
   button {

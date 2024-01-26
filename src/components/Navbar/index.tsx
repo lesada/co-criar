@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import { Logos } from "@/assets/Logos";
-import { ROUTES_PATHS } from "@/constants/routesPaths";
+import { Logos } from '@/assets/logos';
+import { ROUTES_PATHS } from '@/constants/routesPaths';
 
-import Button from "../Button";
+import Button from '../Button';
 
-import { Container, Item, List } from "./styles";
+import { Container, Item, List } from './styles';
 
 function Navbar() {
   const pathname = usePathname();
