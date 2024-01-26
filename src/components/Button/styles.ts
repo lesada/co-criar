@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import { variant } from '.';
 
 export const Container = styled.button<{
@@ -18,7 +19,9 @@ export const Container = styled.button<{
   font-size: 16px;
   font-weight: 600;
 
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 
   ${({ $variant, theme }) => {
     switch ($variant) {
