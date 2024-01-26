@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Providers from '@/providers';
+import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Co-Criar Desenvolvimento',
@@ -16,7 +17,7 @@ export default function RootLayout({
       <body>
         <Providers>
           <Navbar />
-          {children}
+          <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         </Providers>
       </body>
     </html>

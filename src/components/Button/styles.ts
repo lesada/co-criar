@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { variant } from '.';
 
-export const Container = styled.button<{
+export const Wrapper = styled.button<{
   $variant?: variant;
 }>`
   display: flex;
@@ -10,7 +10,7 @@ export const Container = styled.button<{
   align-items: center;
 
   height: 52px;
-  width: 100%;
+  width: fit-content;
   min-width: 240px;
   padding: 16px 32px;
 

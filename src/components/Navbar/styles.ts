@@ -1,17 +1,15 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   position: sticky;
   top: 0;
 
   width: 100%;
-  padding: 24px 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   background-color: ${({ theme }) => theme.colors.neutral[0]};
   border-bottom: 1px solid ${({ theme }) => theme.colors.neutral[100]};
+
+  z-index: 5;
 `;
 
 export const List = styled.ul`
@@ -38,4 +36,11 @@ export const Item = styled.li<{ $detach?: boolean }>`
       font-weight: 700;
       color: ${({ theme }) => theme.colors.primary[800]};
     `}
+`;
+
+export const Menu = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
 `;

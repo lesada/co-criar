@@ -1,6 +1,6 @@
 'use client';
 
-import { Container } from './styles';
+import { Wrapper } from './styles';
 
 export type variant = 'primary' | 'secondary' | 'complementary';
 
@@ -11,9 +11,9 @@ type ButtonProps = {
 
 function Button({ variant = 'primary', children, ...rest }: ButtonProps) {
   return (
-    <Container $variant={variant} {...rest}>
+    <Wrapper $variant={variant} {...rest}>
       {children}
-    </Container>
+    </Wrapper>
   );
 }
 
