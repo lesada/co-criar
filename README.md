@@ -23,6 +23,6 @@
 
 ### 🎨 Design
 
-[Figma](<[https://www.figma.com/file/hStalNBQ6C01YhAuAjJtTr/Coffee-Delivery-%E2%80%A2-Desafio-React-Native-(Community)?node-id=2%3A12&mode=dev>](https://www.figma.com/file/tuWMfKi65jaxFdwrByysiT/COCRIAR?node-id=1%3A3063&mode=dev)https://www.figma.com/file/tuWMfKi65jaxFdwrByysiT/COCRIAR?node-id=1%3A3063&mode=dev)
+[Figma]([https://www.figma.com/file/hStalNBQ6C01YhAuAjJtTr/Coffee-Delivery-%E2%80%A2-Desafio-React-Native-(Community)?node-id=2%3A12&mode=dev>](https://www.figma.com/file/tuWMfKi65jaxFdwrByysiT/COCRIAR?node-id=1%3A3063&mode=dev)https://www.figma.com/file/tuWMfKi65jaxFdwrByysiT/COCRIAR?node-id=1%3A3063&mode=dev)
 
 
