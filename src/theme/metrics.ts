@@ -1,6 +1,6 @@
 const metrics = {
   padding: { desktop: '48px', mobile: '32px' },
-  container: '1200px',
+  container: '1280px',
   breakpoints: {
     mobile: '375px',
     tablet: '768px',

@@ -8,8 +8,8 @@ import { Logos } from '@/assets/logos';
 import { ROUTES_PATHS } from '@/constants/routesPaths';
 
 import Button from '../Button';
-
 import Container from '../Container';
+
 import { Item, List, Menu, Wrapper } from './styles';
 
 function Navbar() {
