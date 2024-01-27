@@ -29,6 +29,15 @@ export const Wrapper = styled.div<{
 
     return theme.colors.neutral[0];
   }};
+
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
 `;
 
 export const Icon = styled.div<{ $variant: 'primary' | 'secondary' }>`
