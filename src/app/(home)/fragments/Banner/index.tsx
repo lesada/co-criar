@@ -21,9 +21,7 @@ function Banner() {
         <Wrapper>
           <Content>
             <Subtitle>Co-Criar Desenvolvimento</Subtitle>
-            <Title>
-              Desenvolvimento Pessoal e Profissional para evoluir e crescer
-            </Title>
+            <Title>Desenvolvimento de pessoas e organizações</Title>
             <Description>
               A Co-criar leva seu propósito “movimentar positivamente a evolução
               de pessoas e organizações”, de forma coerente em suas abordagens

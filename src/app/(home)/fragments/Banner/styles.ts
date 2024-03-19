@@ -25,6 +25,7 @@ export const Subtitle = styled.h2`
   letter-spacing: 0.18px;
   color: ${({ theme }) => theme.colors.complementary.secondary[900]};
   opacity: 0.8;
+  font-family: ${({ theme }) => theme.fonts.Poppins.style.fontFamily};
 `;
 
 export const Title = styled.h1`

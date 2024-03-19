@@ -6,15 +6,18 @@ import {
 
 const Inter = InterFont({
   subsets: ['latin'],
+  display: 'swap',
 });
 
 const Poppins = PoppinsFont({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
+  display: 'swap',
 });
 
 const OpenSans = OpenSansFont({
   subsets: ['latin'],
+  display: 'swap',
 });
 
 export default {

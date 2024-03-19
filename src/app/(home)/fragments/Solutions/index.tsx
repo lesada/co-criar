@@ -13,7 +13,7 @@ function Solutions() {
     <Container>
       <Section tag="Soluções Co-criar">
         <Wrapper>
-          <Title>Soluções para você e a sua empresa</Title>
+          <Title>Soluções e possibilidades</Title>
           <Description>
             Os serviços estão disponíveis em formato presencial e em ambientes
             virtuais (on-line e ao vivo). Sinta-se à vontade para nos contatar e
