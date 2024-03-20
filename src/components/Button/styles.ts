@@ -53,7 +53,18 @@ export const Wrapper = styled.button<{
           }
         `;
       case 'complementary':
-        return css``;
+        return css`
+          background-color: ${theme.colors.complementary.primary[200]};
+          color: ${theme.colors.neutral[0]};
+
+          &:hover {
+            background-color: ${theme.colors.complementary.primary[500]};
+          }
+
+          &:focus {
+            background-color: ${theme.colors.complementary.primary[50]};
+          }
+        `;
     }
   }}
 `;
