@@ -10,9 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.Inter.style.fontFamily};
   }
 
-  body {
-    padding-bottom: 32px;
-  }
 
   button {
     cursor: pointer;

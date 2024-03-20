@@ -2,6 +2,7 @@
 
 import AboutUs from './fragments/AboutUs';
 import Banner from './fragments/Banner';
+import Clients from './fragments/Clients';
 import Solutions from './fragments/Solutions';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Banner />
       <Solutions />
       <AboutUs />
+      <Clients />
     </>
   );
 }
