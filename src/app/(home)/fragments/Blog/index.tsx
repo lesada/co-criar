@@ -5,29 +5,27 @@ import Section from '@/components/Section';
 
 import { items } from './constants';
 
-import { Title, Wrapper } from './styles';
+import { Wrapper } from './styles';
 
-function Events() {
+function Blog() {
   return (
     <Container>
-      <Section tag="Depoimentos de Clientes">
-        <Title>Próximos eventos</Title>
+      <Section tag="Blog Co-Criar">
         <Wrapper>
           {items.map((item) => (
             <Card
               key={item.title}
-              tag="Eventos"
               title={item.title}
               description={item.description}
               image={item.image}
-              button={item.button}
+              tag="Tecnologia"
             />
           ))}
         </Wrapper>
-        <GoTo link="">Ver Mais Eventos</GoTo>
+        <GoTo link="">Ver Mais Artigos</GoTo>
       </Section>
     </Container>
   );
 }
 
-export default Events;
+export default Blog;

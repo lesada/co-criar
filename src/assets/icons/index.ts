@@ -1,3 +1,4 @@
+import ArrowRight from './arrow-right.svg';
 import Bag from './bag.svg';
 import Certificate from './certificate.svg';
 import FourSquares from './four-squares.svg';
@@ -16,6 +17,7 @@ const Icons = {
   Trophy,
   Users,
   FourSquares,
+  ArrowRight,
 };
 
 export default Icons;

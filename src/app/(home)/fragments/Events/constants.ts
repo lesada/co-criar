@@ -12,7 +12,7 @@ export const items = [
     },
   },
   {
-    title: 'Co-criar Desenvolvimento',
+    title: 'Co-criar Tecnologia',
     description:
       'Turma confirmada! O Enjoy foi elaborado a partir da integração das experiências econhecimentos profissionais da facilitadora Letiene Ferreira, fundamentando-oem abordagens...',
     image: Images.AboutUs,
@@ -22,7 +22,7 @@ export const items = [
     },
   },
   {
-    title: 'Co-criar Desenvolvimento',
+    title: 'Co-criar Inovação',
     description:
       'Turma confirmada! O Enjoy foi elaborado a partir da integração das experiências econhecimentos profissionais da facilitadora Letiene Ferreira, fundamentando-oem abordagens...',
     image: Images.AboutUs,

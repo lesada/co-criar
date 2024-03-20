@@ -2,6 +2,7 @@
 
 import AboutUs from './fragments/AboutUs';
 import Banner from './fragments/Banner';
+import Blog from './fragments/Blog';
 import CallTo from './fragments/CallTo';
 import Clients from './fragments/Clients';
 import Events from './fragments/Events';
@@ -16,6 +17,7 @@ export default function Home() {
       <Clients />
       <Events />
       <CallTo />
+      <Blog />
     </>
   );
 }

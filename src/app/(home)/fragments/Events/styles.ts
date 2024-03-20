@@ -15,4 +15,5 @@ export const Wrapper = styled.div`
   align-items: stretch;
   gap: 32px;
   flex-wrap: wrap;
+  margin-bottom: 32px;
 `;
