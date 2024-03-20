@@ -1,19 +1,10 @@
-import Image from 'next/image';
-
-import Images from '@/assets/images';
+import Card from '@/components/Card';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
 
-import {
-  Card,
-  CardButton,
-  CardDescription,
-  CardImage,
-  CardTitle,
-  CartTag,
-  Title,
-  Wrapper,
-} from './styles';
+import { items } from './constants';
+
+import { Title, Wrapper } from './styles';
 
 function Events() {
   return (
@@ -21,19 +12,16 @@ function Events() {
       <Section tag="Depoimentos de Clientes">
         <Title>Próximos eventos</Title>
         <Wrapper>
-          <Card>
-            <CardImage>
-              <Image src={Images.AboutUs} alt="" />
-            </CardImage>
-            <CartTag>Eventos</CartTag>
-            <CardTitle>A importância da comunicação</CardTitle>
-            <CardDescription>
-              Turma confirmada! <br />O Enjoy foi elaborado a partir da
-              integração das experiências econhecimentos profissionais da
-              facilitadora Letiene Ferreira, fundamentando-o em abordagens...
-            </CardDescription>
-            <CardButton>Saiba mais</CardButton>
-          </Card>
+          {items.map((item) => (
+            <Card
+              key={item.title}
+              tag="Eventos"
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              button={item.button}
+            />
+          ))}
         </Wrapper>
       </Section>
     </Container>
