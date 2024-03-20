@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Providers from '@/providers';
 
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+          <Footer />
         </Providers>
       </body>
     </html>
