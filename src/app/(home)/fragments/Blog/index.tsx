@@ -2,6 +2,7 @@ import Card from '@/components/Card';
 import Container from '@/components/Container';
 import GoTo from '@/components/GoTo';
 import Section from '@/components/Section';
+import { ROUTES_PATHS } from '@/constants/routesPaths';
 
 import { items } from './constants';
 
@@ -22,7 +23,7 @@ function Blog() {
             />
           ))}
         </Wrapper>
-        <GoTo link="">Ver Mais Artigos</GoTo>
+        <GoTo link={ROUTES_PATHS.BLOG}>Ver Mais Artigos</GoTo>
       </Section>
     </Container>
   );

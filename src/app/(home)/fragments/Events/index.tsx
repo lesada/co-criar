@@ -2,6 +2,7 @@ import Card from '@/components/Card';
 import Container from '@/components/Container';
 import GoTo from '@/components/GoTo';
 import Section from '@/components/Section';
+import { ROUTES_PATHS } from '@/constants/routesPaths';
 
 import { items } from './constants';
 
@@ -24,7 +25,7 @@ function Events() {
             />
           ))}
         </Wrapper>
-        <GoTo link="">Ver Mais Eventos</GoTo>
+        <GoTo link={ROUTES_PATHS.EVENTS}>Ver Mais Eventos</GoTo>
       </Section>
     </Container>
   );

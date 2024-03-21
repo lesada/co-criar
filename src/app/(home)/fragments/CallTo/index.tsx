@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
+import { ROUTES_PATHS } from '@/constants/routesPaths';
 
 import { Background, Content, Subtitle, Title } from './styles';
 
@@ -20,7 +21,12 @@ function CallTo() {
               metodologias
             </Subtitle>
           </Content>
-          <Button variant="complementary">Agendar um horário</Button>
+          <Button
+            variant="complementary"
+            onClick={() => push(ROUTES_PATHS.CONTACT)}
+          >
+            Agendar um horário
+          </Button>
         </Background>
       </Section>
     </Container>
