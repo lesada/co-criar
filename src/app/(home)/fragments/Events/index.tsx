@@ -10,7 +10,7 @@ import { Title, Wrapper } from './styles';
 
 function Events() {
   return (
-    <Container>
+    <Container id="events">
       <Section tag="Depoimentos de Clientes">
         <Title>Próximos eventos</Title>
         <Wrapper>

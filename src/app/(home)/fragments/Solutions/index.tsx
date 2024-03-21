@@ -1,5 +1,3 @@
-import { Fragment } from 'react';
-
 import Container from '@/components/Container';
 import Section from '@/components/Section';
 
@@ -21,7 +19,10 @@ function Solutions() {
             conosco.
           </Description>
           {solutions.map((solution) => (
-            <Fragment key={solution.title}>
+            <div
+              key={solution.title}
+              id={solution.variant === 'primary' ? 'forYourCompany' : 'forYou'}
+            >
               <Subtitle>{solution.title}</Subtitle>
               <List>
                 {solution.items.map((item) => (
@@ -35,7 +36,7 @@ function Solutions() {
                   />
                 ))}
               </List>
-            </Fragment>
+            </div>
           ))}
         </Wrapper>
       </Section>

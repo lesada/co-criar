@@ -24,19 +24,19 @@ function Footer() {
     <Background>
       <Container>
         <Content>
-          <ImageContainer>
+          <ImageContainer href="#banner">
             <Image src={Logos.CoCriarYellow} alt="" />
           </ImageContainer>
           <List>
             <ListTitle>Soluções</ListTitle>
             <ListItem>
-              <Link href={ROUTES_PATHS.HOME}>Para sua empresa</Link>
+              <Link href="#forYourCompany">Para sua empresa</Link>
             </ListItem>
             <ListItem>
-              <Link href={ROUTES_PATHS.HOME}>Para você</Link>
+              <Link href="#forYou">Para você</Link>
             </ListItem>
             <ListItem>
-              <Link href={ROUTES_PATHS.HOME}>Eventos</Link>
+              <Link href="#events">Eventos</Link>
             </ListItem>
           </List>
 

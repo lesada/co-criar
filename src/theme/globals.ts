@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.Inter.style.fontFamily};
   }
 
+  html, body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 104px;
+  }
 
   button {
     cursor: pointer;

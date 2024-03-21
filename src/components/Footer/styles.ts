@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Background = styled.footer`
@@ -7,7 +8,7 @@ export const Background = styled.footer`
   background-color: ${({ theme }) => theme.colors.primary[700]};
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled(Link)`
   width: 80px;
   height: 80px;
 

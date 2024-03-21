@@ -20,7 +20,7 @@ function Banner() {
   const { push } = useRouter();
 
   return (
-    <Container>
+    <Container id="banner">
       <Section>
         <Wrapper>
           <Content>
