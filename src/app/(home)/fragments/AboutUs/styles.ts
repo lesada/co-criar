@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 64px;
 `;
 
@@ -36,7 +37,7 @@ export const ImageContainer = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
 
-  position: relative;
+  max-width: 100%;
 
   img {
     height: 100%;

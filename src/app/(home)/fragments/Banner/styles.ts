@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   min-height: 640px;
   height: 100%;
-  max-height: 100vh;
   padding-top: 64px;
 `;
 
@@ -60,5 +59,9 @@ export const ImageContainer = styled.div`
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  @media (max-width: ${({ theme }) => theme.metrics.breakpoints.laptop}) {
+    display: none;
   }
 `;

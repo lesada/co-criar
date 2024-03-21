@@ -3,6 +3,7 @@ import Bag from './bag.svg';
 import Certificate from './certificate.svg';
 import Facebook from './facebook.svg';
 import FourSquares from './four-squares.svg';
+import HamburgerMenu from './hamburger-menu.svg';
 import Instagram from './instagram.svg';
 import Puzzle from './puzzle.svg';
 import Rocket from './rocket.svg';
@@ -24,6 +25,7 @@ const Icons = {
   Facebook,
   Instagram,
   WhatsApp,
+  HamburgerMenu,
 };
 
 export default Icons;

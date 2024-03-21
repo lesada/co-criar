@@ -1,19 +1,43 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
+import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import Icons from '@/assets/icons';
 import { Logos } from '@/assets/logos';
 import { ROUTES_PATHS } from '@/constants/routesPaths';
 
 import Button from '../Button';
 import Container from '../Container';
 
-import { Item, List, Menu, Wrapper } from './styles';
+import { Item, List, Menu, MobileList, MobileMenu, Wrapper } from './styles';
 
 function Navbar() {
   const pathname = usePathname();
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', () => {
+      setWindowWidth(window.innerWidth);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setWindowWidth(window.innerWidth);
+      });
+    };
+  }, []);
+
+  const variants = {
+    open: { opacity: 1, height: 'auto' },
+    closed: { opacity: 0, height: 0 },
+  };
 
   return (
     <Wrapper>
@@ -25,29 +49,71 @@ function Navbar() {
             width={120}
             priority
           />
-          <List>
-            <Item $detach={pathname === ROUTES_PATHS.HOME}>
-              <Link href={ROUTES_PATHS.HOME}>Home</Link>
-            </Item>
-            <Item $detach={pathname === ROUTES_PATHS.ABOUT}>
-              <Link href={ROUTES_PATHS.ABOUT}>Sobre</Link>
-            </Item>
-            <Item $detach={pathname === ROUTES_PATHS.SERVICES}>
-              <Link href={ROUTES_PATHS.SERVICES}>Serviços</Link>
-            </Item>
-            <Item $detach={pathname.includes(ROUTES_PATHS.EVENTS)}>
-              <Link href={ROUTES_PATHS.EVENTS}>Eventos</Link>
-            </Item>
-            <Item $detach={pathname === ROUTES_PATHS.CONTACT}>
-              <Link href={ROUTES_PATHS.CONTACT}>Contato</Link>
-            </Item>
-            <Item $detach={pathname.includes(ROUTES_PATHS.BLOG)}>
-              <Link href={ROUTES_PATHS.BLOG}>Blog</Link>
-            </Item>
-          </List>
-          <Button variant="secondary">Agendar um horário</Button>
+          {windowWidth > 1024 ? (
+            <>
+              <List>
+                <Item $detach={pathname === ROUTES_PATHS.HOME}>
+                  <Link href={ROUTES_PATHS.HOME}>Home</Link>
+                </Item>
+                <Item $detach={pathname === ROUTES_PATHS.ABOUT}>
+                  <Link href={ROUTES_PATHS.ABOUT}>Sobre</Link>
+                </Item>
+                <Item $detach={pathname === ROUTES_PATHS.SERVICES}>
+                  <Link href={ROUTES_PATHS.SERVICES}>Serviços</Link>
+                </Item>
+                <Item $detach={pathname.includes(ROUTES_PATHS.EVENTS)}>
+                  <Link href={ROUTES_PATHS.EVENTS}>Eventos</Link>
+                </Item>
+                <Item $detach={pathname === ROUTES_PATHS.CONTACT}>
+                  <Link href={ROUTES_PATHS.CONTACT}>Contato</Link>
+                </Item>
+                <Item $detach={pathname.includes(ROUTES_PATHS.BLOG)}>
+                  <Link href={ROUTES_PATHS.BLOG}>Blog</Link>
+                </Item>
+              </List>
+
+              <Button variant="secondary">Agendar um horário</Button>
+            </>
+          ) : (
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Icons.HamburgerMenu />
+            </button>
+          )}
         </Menu>
       </Container>
+      <AnimatePresence>
+        {windowWidth <= 1024 && isMenuOpen && (
+          <MobileMenu
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={variants}
+          >
+            <Container>
+              <MobileList>
+                <Item $detach={pathname === ROUTES_PATHS.HOME}>
+                  <Link href={ROUTES_PATHS.HOME}>Home</Link>
+                </Item>
+                <Item $detach={pathname === ROUTES_PATHS.ABOUT}>
+                  <Link href={ROUTES_PATHS.ABOUT}>Sobre</Link>
+                </Item>
+                <Item $detach={pathname === ROUTES_PATHS.SERVICES}>
+                  <Link href={ROUTES_PATHS.SERVICES}>Serviços</Link>
+                </Item>
+                <Item $detach={pathname.includes(ROUTES_PATHS.EVENTS)}>
+                  <Link href={ROUTES_PATHS.EVENTS}>Eventos</Link>
+                </Item>
+                <Item $detach={pathname === ROUTES_PATHS.CONTACT}>
+                  <Link href={ROUTES_PATHS.CONTACT}>Contato</Link>
+                </Item>
+                <Item $detach={pathname.includes(ROUTES_PATHS.BLOG)}>
+                  <Link href={ROUTES_PATHS.BLOG}>Blog</Link>
+                </Item>
+              </MobileList>
+            </Container>
+          </MobileMenu>
+        )}
+      </AnimatePresence>
     </Wrapper>
   );
 }

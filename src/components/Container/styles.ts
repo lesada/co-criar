@@ -7,6 +7,6 @@ export const Wrapper = styled.div`
   padding: 0 ${({ theme }) => theme.metrics.padding.desktop};
 
   @media (max-width: ${({ theme }) => theme.metrics.breakpoints.tablet}) {
-    padding: 24px ${({ theme }) => theme.metrics.padding.mobile};
+    padding: 0 ${({ theme }) => theme.metrics.padding.mobile};
   }
 `;

@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
 
   width: 100%;
@@ -42,5 +43,19 @@ export const Menu = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 24px 0;
+`;
+
+export const MobileMenu = styled(motion.div)`
+  border-top: 1px solid ${({ theme }) => theme.colors.neutral[100]};
+  background-color: ${({ theme }) => theme.colors.neutral[0]};
+`;
+
+export const MobileList = styled(List)`
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  margin-left: 0;
+  border-top: 1px solid ${({ theme }) => theme.colors.neutral[100]};
   padding: 24px 0;
 `;
