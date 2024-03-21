@@ -1,13 +1,17 @@
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 import Images from '@/assets/images';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
+import { ROUTES_PATHS } from '@/constants/routesPaths';
 
 import { Content, Description, ImageContainer, Title, Wrapper } from './styles';
 
 function AboutUs() {
+  const { push } = useRouter();
+
   return (
     <Container>
       <Section tag="A Co-criar">
@@ -25,7 +29,7 @@ function AboutUs() {
               Estimular a cocriação de alternativas contribui na resolução de
               situações complexas.
             </Description>
-            <Button>Saiba mais</Button>
+            <Button onClick={() => push(ROUTES_PATHS.ABOUT)}>Saiba mais</Button>
           </Content>
 
           <ImageContainer>

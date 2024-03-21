@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 import Images from '@/assets/images';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
+import { ROUTES_PATHS } from '@/constants/routesPaths';
 
 import {
   Content,
@@ -15,6 +17,8 @@ import {
 } from './styles';
 
 function Banner() {
+  const { push } = useRouter();
+
   return (
     <Container>
       <Section>
@@ -27,7 +31,9 @@ function Banner() {
               de pessoas e organizações”, de forma coerente em suas abordagens
               de atuação.
             </Description>
-            <Button>Agendar um horário</Button>
+            <Button onClick={() => push(ROUTES_PATHS.ABOUT)}>
+              Agendar um horário
+            </Button>
           </Content>
 
           <ImageContainer>

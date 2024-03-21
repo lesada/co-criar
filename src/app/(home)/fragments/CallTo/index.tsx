@@ -1,3 +1,5 @@
+import { useRouter } from 'next/navigation';
+
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
@@ -5,6 +7,8 @@ import Section from '@/components/Section';
 import { Background, Content, Subtitle, Title } from './styles';
 
 function CallTo() {
+  const { push } = useRouter();
+
   return (
     <Container>
       <Section>

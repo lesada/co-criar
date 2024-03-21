@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import Icons from '@/assets/icons';
 import { Logos } from '@/assets/logos';
@@ -13,10 +13,12 @@ import { ROUTES_PATHS } from '@/constants/routesPaths';
 
 import Button from '../Button';
 import Container from '../Container';
+import Loader from '../Loader';
 
 import { Item, List, Menu, MobileList, MobileMenu, Wrapper } from './styles';
 
 function Navbar() {
+  const { push } = useRouter();
   const pathname = usePathname();
   const [windowWidth, setWindowWidth] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,6 +40,8 @@ function Navbar() {
     open: { opacity: 1, height: 'auto' },
     closed: { opacity: 0, height: 0 },
   };
+
+  if (windowWidth === 0) return <Loader fullScreen />;
 
   return (
     <Wrapper>
@@ -72,7 +76,12 @@ function Navbar() {
                 </Item>
               </List>
 
-              <Button variant="secondary">Agendar um horário</Button>
+              <Button
+                variant="secondary"
+                onClick={() => push(ROUTES_PATHS.ABOUT)}
+              >
+                Agendar um horário
+              </Button>
             </>
           ) : (
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
