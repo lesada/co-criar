@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.nav`
-  position: fixed;
+  position: sticky;
   top: 0;
 
   width: 100%;
@@ -49,6 +49,9 @@ export const Menu = styled.div`
 export const MobileMenu = styled(motion.div)`
   border-top: 1px solid ${({ theme }) => theme.colors.neutral[100]};
   background-color: ${({ theme }) => theme.colors.neutral[0]};
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral[100]};
 `;
 
 export const MobileList = styled(List)`
@@ -56,6 +59,5 @@ export const MobileList = styled(List)`
   gap: 32px;
   align-items: flex-start;
   margin-left: 0;
-  border-top: 1px solid ${({ theme }) => theme.colors.neutral[100]};
   padding: 24px 0;
 `;
