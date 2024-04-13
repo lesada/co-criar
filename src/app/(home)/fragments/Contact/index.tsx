@@ -1,3 +1,4 @@
+import whatsAppApi from '@/api/whatsapp';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Input from '@/components/Input';
@@ -17,6 +18,26 @@ import {
 } from './styles';
 
 function Contact() {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const message = formData.get('message');
+
+    const whatsAppMessage = `${message} \n \n
+    Nome: ${name}\n \n
+    E-mail: ${email}\n \n
+    Celular: ${phone}
+    `;
+
+    window.open(whatsAppApi(whatsAppMessage), '_blank');
+  };
+
   return (
     <Background>
       <Container>
@@ -36,17 +57,29 @@ function Contact() {
                 90480-003
               </Info>
             </Content>
-            <Form>
+            <Form onSubmit={onSubmit}>
               <FormTitle>Entre em contato</FormTitle>
               <FormDescription>
                 Dúvidas sobre nossos serviços e como podemos te ajudar? Entre em
                 contato!
               </FormDescription>
-              <Input id="name" label="Nome" />
-              <Input id="email" label="E-mail" />
-              <Input id="phone" label="Celular" />
-              <Textarea id="message" label="Como podemos te ajudar?" rows={6} />
-              <Button>Enviar</Button>
+              <Input id="name" name="name" label="Nome" required />
+              <Input
+                id="email"
+                name="email"
+                label="E-mail"
+                type="email"
+                required
+              />
+              <Input id="phone" name="phone" label="Celular" required />
+              <Textarea
+                id="message"
+                name="message"
+                label="Como podemos te ajudar?"
+                rows={6}
+                required
+              />
+              <Button type="submit">Enviar</Button>
             </Form>
           </Wrapper>
         </Section>

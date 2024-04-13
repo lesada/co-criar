@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import whatsAppApi from '@/api/whatsapp';
 import Icons from '@/assets/icons';
 import { Logos } from '@/assets/logos';
 import { ROUTES_PATHS } from '@/constants/routesPaths';
@@ -69,7 +70,7 @@ function Footer() {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href={ROUTES_PATHS.HOME}>
+              <Link href={whatsAppApi()}>
                 <IconContainer>
                   <Icons.WhatsApp />
                 </IconContainer>

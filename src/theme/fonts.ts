@@ -8,24 +8,28 @@ import {
 const Inter = InterFont({
   subsets: ['latin'],
   display: 'swap',
+  adjustFontFallback: false,
 });
 
 const Poppins = PoppinsFont({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
+  adjustFontFallback: false,
 });
 
 const OpenSans = OpenSansFont({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
+  adjustFontFallback: false,
 });
 
 const DmSans = DmSansFont({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
+  adjustFontFallback: false,
 });
 
 export default {

@@ -6,6 +6,7 @@ import FourSquares from './four-squares.svg';
 import HamburgerMenu from './hamburger-menu.svg';
 import Instagram from './instagram.svg';
 import Puzzle from './puzzle.svg';
+import RocketMin from './rocket-min.svg';
 import Rocket from './rocket.svg';
 import Suitcase from './suitcase.svg';
 import Trophy from './trophy.svg';
@@ -26,6 +27,7 @@ const Icons = {
   Instagram,
   WhatsApp,
   HamburgerMenu,
+  RocketMin,
 };
 
 export default Icons;
