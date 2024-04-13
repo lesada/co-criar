@@ -31,23 +31,23 @@ function Footer() {
           <List>
             <ListTitle>Soluções</ListTitle>
             <ListItem>
-              <Link href="#forYourCompany">Para sua empresa</Link>
+              <Link href="/#forYourCompany">Para sua empresa</Link>
             </ListItem>
             <ListItem>
-              <Link href="#forYou">Para você</Link>
+              <Link href="/#forYou">Para você</Link>
             </ListItem>
             <ListItem>
-              <Link href="#events">Eventos</Link>
+              <Link href="/#events">Eventos</Link>
             </ListItem>
           </List>
 
           <List>
             <ListTitle>Sobre</ListTitle>
             <ListItem>
-              <Link href={ROUTES_PATHS.HOME}>A Cocriar</Link>
+              <Link href={`${ROUTES_PATHS.ABOUT}/#enterprise`}>A Cocriar</Link>
             </ListItem>
             <ListItem>
-              <Link href={ROUTES_PATHS.HOME}>Letiene Ferreira</Link>
+              <Link href={`${ROUTES_PATHS.ABOUT}/#me`}>Letiene Ferreira</Link>
             </ListItem>
           </List>
 

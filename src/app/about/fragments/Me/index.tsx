@@ -9,7 +9,7 @@ import { Content, ImageContainer, Text, Title, Wrapper } from './styles';
 function Me() {
   return (
     <Container>
-      <Section tag="Fundadora da Co-criar">
+      <Section tag="Fundadora da Co-criar" id="me">
         <Wrapper>
           <Content>
             <Title>Sobre a Letiene Ferreira</Title>

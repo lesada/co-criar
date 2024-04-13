@@ -62,18 +62,18 @@ function Navbar() {
                 <Item $detach={pathname === ROUTES_PATHS.ABOUT}>
                   <Link href={ROUTES_PATHS.ABOUT}>Sobre</Link>
                 </Item>
-                <Item $detach={pathname === ROUTES_PATHS.SERVICES}>
+                {/* <Item $detach={pathname === ROUTES_PATHS.SERVICES}>
                   <Link href={ROUTES_PATHS.SERVICES}>Serviços</Link>
                 </Item>
                 <Item $detach={pathname.includes(ROUTES_PATHS.EVENTS)}>
                   <Link href={ROUTES_PATHS.EVENTS}>Eventos</Link>
-                </Item>
+                </Item> */}
                 <Item $detach={pathname === ROUTES_PATHS.CONTACT}>
                   <Link href={ROUTES_PATHS.CONTACT}>Contato</Link>
                 </Item>
-                <Item $detach={pathname.includes(ROUTES_PATHS.BLOG)}>
+                {/* <Item $detach={pathname.includes(ROUTES_PATHS.BLOG)}>
                   <Link href={ROUTES_PATHS.BLOG}>Blog</Link>
-                </Item>
+                </Item> */}
               </List>
 
               <Button

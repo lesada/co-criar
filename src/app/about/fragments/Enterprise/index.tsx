@@ -6,7 +6,7 @@ import { Subtitle, Text, Title } from './styles';
 function Enterprise() {
   return (
     <Container>
-      <Section tag="Quem somos?">
+      <Section tag="Quem somos?" id="enterprise">
         <Title>A Co-criar</Title>
         <Subtitle>
           A Co-criar leva seu propósito “movimentar positivamente a evolução de
