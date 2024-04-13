@@ -24,6 +24,7 @@ export const TextareaContainer = styled.textarea`
   line-height: 18px;
   font-family: ${({ theme }) => theme.fonts.Inter.style.fontFamily};
   background-color: ${({ theme }) => theme.colors.neutral[0]};
+  resize: vertical;
 
   &:focus {
     border-color: ${({ theme }) => theme.colors.secondary[700]};
